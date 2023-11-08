@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link href="https://unpkg.com/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mx-auto">
+    <div class="calculator grid grid-cols-4 gap-4">
+      <div class="display col-span-4 bg-gray-200 rounded">
+        <input type="text" id="display" class="w-full h-full text-right border-none">
+      </div>
+      <div class="buttons">
+        <button type="button" id="clear" class="bg-red-500 hover:bg-red-600 rounded">C</button>
+        <button type="button" id="7" class="bg-gray-300 hover:bg-gray-400 rounded">7</button>
+        <button type="button" id="8" class="bg-gray-300 hover:bg-gray-400 rounded">8</button>
+        <button type="button" id="9" class="bg-gray-300 hover:bg-gray-400 rounded">9</button>
+        <button type="button" id="/" class="bg-orange-500 hover:bg-orange-600 rounded">/</button>
+        <button type="button" id="4" class="bg-gray-300 hover:bg-gray-400 rounded">4</button>
+        <button type="button" id="5" class="bg-gray-300 hover:bg-gray-400 rounded">5</button>
+        <button type="button" id="6" class="bg-gray-300 hover:bg-gray-400 rounded">6</button>
+        <button type="button" id="*" class="bg-orange-500 hover:bg-orange-600 rounded">*</button>
+        <button type="button" id="1" class="bg-gray-300 hover:bg-gray-400 rounded">1</button>
+        <button type="button" id="2" class="bg-gray-300 hover:bg-gray-400 rounded">2</button>
+        <button type="button" id="3" class="bg-gray-300 hover:bg-gray-400 rounded">3</button>
+        <button type="button" id="-" class="bg-orange-500 hover:bg-orange-600 rounded">-</button>
+        <button type="button" id="0" class="bg-gray-300 hover:bg-gray-400 rounded">0</button>
+        <button type="button" id="." class="bg-gray-300 hover:bg-gray-400 rounded">.</button>
+        <button type="button" id="=" class="bg-green-500 hover:bg-green-600 rounded">=</button>
+        <button type="button" id "+" class="bg-orange-500 hover:bg-orange-600 rounded">+</button>
+      </div>
+    </div>
+  </div>
+
+  <script >
+const display = document.getElementById('display');
+const buttons = document.querySelectorAll('.buttons button');
+
+// Add event listeners to the buttons.
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const value = button.innerHTML;
+
+    switch (value) {
+      case '=':
+        // Calculate the expression and display the result.
+        const result = eval(display.value);
+        display.value = result;
+        break;
+      case 'C':
+        // Clear the display.
+        display.value = '';
+        break;
+      default:
+        // Append the button value to the display.
+        display.value += value;
+    }
+  });
+});
+
+</script>
