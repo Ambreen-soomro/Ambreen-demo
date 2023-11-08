@@ -1,0 +1,69 @@
+<html>
+
+<head>
+	<title>
+		javascript
+	</title>
+	<script>
+	  
+// 	  var ary = [
+
+//      ["roohi" , "BSc.IT" , "2ndyear" , 18],
+//      ["Ambreen" , "BSc.IT" , "2ndyear" , 20],
+//      ["saba" , "BSc.IT" , "2ndyear" , 30],
+//      ["aqsa" , "BSc.IT" , "2ndyear" , 40],
+//      ["masooma" , "BSc.IT" , "2ndyear" , 55]
+
+// 	  	];
+//      document.write("<table border = '1px'")
+// 	  for (a=0; a < ary.length;  a++){
+//       document.write("<tr>")
+// 	  	for(b=0;  b < ary[a].length; b++){
+// 	  	document.write("<td>" + ary[a][b] + " </td>");
+// 	  }
+
+//      document.write("</tr>");
+// }
+
+// document.write("</table>")
+
+
+  var ary = [
+
+     ["roohi" , "BSc.IT" , "2ndyear" , 18],
+     ["Ambreen" , "BSc.IT" , "2ndyear" , 20],
+     ["saba" , "BSc.IT" , "2ndyear" , 30],
+     ["aqsa" , "BSc.IT" , "2ndyear" , 40],
+     ["masooma" , "BSc.IT" , "2ndyear" , 55]
+
+	  	];
+  ary[0][0] = "moto";
+  ary[1][1] = "pd";
+   delete ary[0][0],
+
+  document.write("<table border='1px' cellspacing='0' >")
+
+for(a=0; a<ary.length; a++){
+
+  document.write("<tr>")
+
+	for(b=0; b< ary[a].length; b++){
+		document.write("<td>" + ary[a][b] + "</td>	");
+	}
+
+	document.write("</tr>");
+}
+
+
+  document.write("</table>")
+
+	</script>
+	<body>
+	<!-- 	<table border="1px">
+			<tr>
+				<td></td>
+			</tr>
+		</table> -->
+	</body>
+</head>
+</html>

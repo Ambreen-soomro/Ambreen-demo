@@ -1,0 +1,38 @@
+<html>
+	<head><title>test</title>
+
+ <style>
+ 	#box{
+    background-color:green;
+    width:200px;
+    height:200px;
+
+ 	}
+ </style>
+	</head>
+	<body>
+		<div id="box"></div>
+
+
+		<script >
+
+		var x = 0;	
+  var id =  setInterval( time , 200);
+
+   function time() {
+   	 x  = x + 10;
+if ( x == 500){
+  clearInterval(id);
+}else{
+   	 var target = document.getElementById("box");
+   	 target.style.marginLeft = x + 'px';
+
+
+   	// console.log("hello" + x);
+   }
+}
+
+
+		</script>
+	</body>
+</html>

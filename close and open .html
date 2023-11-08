@@ -1,0 +1,24 @@
+<html>
+	
+
+	<head><title>te</title>
+	</head>
+
+	<body>
+		<button onclick="helloWorld()">open new window</button>
+		<button onclick="closewindow()">close new window</button>
+
+		<script>
+			var  myworld;
+			function helloWorld(){
+				myworld = window.open("https://www.twitter.com" , " ", "width=500px,height=300px,left=200px,top=100px,");
+			}
+
+
+			function closewindow() {
+			myworld.close();
+			}
+		</script>
+	</body>
+
+</html>
